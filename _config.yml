@@ -1,0 +1,43 @@
+# Jekyll SEO Tags
+# https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+author: Tare LLC
+title: Your awesome title
+description: >- # this means to ignore newlines until "baseurl:"
+  This appears in your document head meta (for
+  Google search results) and in your feed.xml site description.
+url: "" # the base hostname & protocol for your site, e.g. https://example.com
+twitter:
+  username: TWITTER_USERNAME
+  card: summary
+facebook:
+  app_id: 1234
+  publisher: 1234
+  admins: 1234
+logo: /assets/COMPANY-LOGO.png
+social:
+  name: Ben Balter
+  links:
+    - https://twitter.com/USERNAME
+    - https://www.facebook.com/USERNAME
+google_site_verification: 1234
+
+# Variables
+email: YOUR-EMAIL@EXAMPLE.COM
+
+# Serving
+repository: dmzza/tare.github.io
+baseurl: "" # the subpath of site, e.g. /blog
+port:    5000
+
+# Build settings
+encoding: utf-8
+safe: true
+sass:
+  style: compressed
+exclude: ['Gemfile', 'Gemfile.lock']
+
+# GitHub Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
