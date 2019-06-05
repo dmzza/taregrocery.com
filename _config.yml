@@ -25,7 +25,6 @@ google_site_verification: 1234
 email: YOUR-EMAIL@EXAMPLE.COM
 
 # Serving
-repository: dmzza/tare.github.io
 baseurl: "" # the subpath of site, e.g. /blog
 port:    5000
 
