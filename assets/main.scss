@@ -5,7 +5,6 @@
  * Fonts
  */
 
-
 /*
  * Navigation
  */
@@ -13,6 +12,31 @@
 /*
  * Body
  */
+
+ body {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 36pt;
+   color: white;
+   background-color: #EFECE4;
+ }
+
+ .container-fluid.wrapper {
+   padding: 15px;
+ }
+
+.col {
+  span {
+    font-family: "Times New Roman", serif;
+  }
+}
+
+#company-name {
+  color: #F74C25;
+}
+
+#social-link {
+
+}
 
 /*
  * Footer

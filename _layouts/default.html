@@ -2,6 +2,12 @@
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 {% include head.html %}
 <body>
-  {{ content }}
+  <div class="container-fluid wrapper">
+    <div class="row">
+      <div class="col">
+        {{ content }}
+      </div>
+    </div>
+  </div>
 </body>
 </html>
