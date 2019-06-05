@@ -27,11 +27,34 @@
 .col {
   span {
     font-family: "Times New Roman", serif;
+    text-decoration: underline;
+    &:hover {
+      color: #F74C25;
+    }
+    &#company-name {
+      color: #F74C25;
+      text-decoration: none;
+    }
   }
 }
 
-#company-name {
-  color: #F74C25;
+.image-text a {
+  position: relative;
+  color: unset;
+  &:visited {
+    color: unset;
+  }
+  &:hover {
+    color: #F74C25;
+    span {
+      display: block;
+    }
+  }
+  span {
+    position: absolute;
+    display: none;
+    z-index: 99;
+  }
 }
 
 #social-link {
