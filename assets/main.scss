@@ -30,10 +30,10 @@
    padding: 15px;
  }
 
-.col {
-  span {
+  span, a {
     font-family: "Times New Roman", serif;
     text-decoration: underline;
+    color: unset;
     &:hover {
       color: #F74C25;
     }
@@ -42,25 +42,21 @@
       text-decoration: none;
     }
   }
-}
 
-.image-text a {
+.image-text {
   position: relative;
-  color: unset;
   &:visited {
     color: unset;
   }
   &:hover {
     color: #F74C25;
-    span {
-      display: block;
-    }
   }
-  span {
-    position: absolute;
-    display: none;
-    z-index: 99;
-  }
+}
+
+.hover-image {
+  position: absolute;
+  display: none;
+  z-index: 99;
 }
 
 
