@@ -1,6 +1,10 @@
 ---
 ---
 
+:root {
+  --primary-color: #F74C25;
+}
+
 /*
  * Fonts
  */
@@ -35,10 +39,10 @@
     text-decoration: underline;
     color: unset;
     &:hover {
-      color: #F74C25;
+      color: var(--primary-color);
     }
     &#company-name {
-      color: #F74C25;
+      color: var(--primary-color);
       text-decoration: none;
     }
   }
@@ -49,7 +53,7 @@
     color: unset;
   }
   &:hover {
-    color: #F74C25;
+    color: var(--primary-color);
   }
 }
 
@@ -67,7 +71,7 @@
   top: -15px;
   left: 0;
   padding:50px;
-  background-color: #F74C25;
+  background-color: var(--primary-color);
   form {
     display: flex;
     flex-direction: column;

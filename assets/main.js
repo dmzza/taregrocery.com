@@ -4,7 +4,9 @@ window.onload = function() {
         link.onmouseover = function(event) {
             let imageId = link.dataset.imageId
             let image = document.getElementById(imageId)
+            let primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
             image.style.display = "block"
+            link.style.color = primaryColor
 
             let boundDimensionByViewport = function(elementStart, elementDimension, viewportDimension, minimumSpaceFromEdge) {
                 let elementEnd = elementStart + elementDimension
@@ -36,12 +38,14 @@ window.onload = function() {
             let x = event.clientX
             let y = event.clientY
             let elementMouseIsOver = document.elementFromPoint(x, y);
-            if(elementMouseIsOver !== null && elementMouseIsOver.id !== imageId) {
+            let dismissImage = function(event) {
                 image.style.display = "none"
+                link.style.color = "white"
+            }
+            if(elementMouseIsOver !== null && elementMouseIsOver.id !== imageId) {
+                dismissImage(event)
             } else {
-                image.onmouseout = function(event) {
-                    image.style.display = "none"
-                }
+                image.onmouseout = dismissImage
             }
         }
     }
