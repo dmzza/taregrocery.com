@@ -30,6 +30,10 @@
     }
  }
 
+ .highlighted {
+  color: var(--primary-color);
+ }
+
  .container-fluid.wrapper {
    padding: 15px;
  }
@@ -42,20 +46,9 @@
       color: var(--primary-color);
     }
     &#company-name {
-      color: var(--primary-color);
       text-decoration: none;
     }
   }
-
-.image-text {
-  position: relative;
-  &:visited {
-    color: unset;
-  }
-  &:hover {
-    color: var(--primary-color);
-  }
-}
 
 .hover-image {
   position: absolute;
