@@ -4,9 +4,11 @@ window.onload = function() {
         link.onmouseover = function(event) {
             let imageId = link.dataset.imageId
             let image = document.getElementById(imageId)
+            let companyName = document.getElementById("company-name")
             let primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
             image.style.display = "block"
             link.style.color = primaryColor
+            companyName.style.color = "white"
 
             let boundDimensionByViewport = function(elementStart, elementDimension, viewportDimension, minimumSpaceFromEdge) {
                 let elementEnd = elementStart + elementDimension
@@ -35,12 +37,15 @@ window.onload = function() {
         link.onmouseout = function(event) {
             let imageId = link.dataset.imageId
             let image = document.getElementById(imageId)
+            let companyName = document.getElementById("company-name")
+            let primaryColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-color');
             let x = event.clientX
             let y = event.clientY
             let elementMouseIsOver = document.elementFromPoint(x, y);
             let dismissImage = function(event) {
                 image.style.display = "none"
                 link.style.color = "white"
+                companyName.style.color = primaryColor
             }
             if(elementMouseIsOver !== null && elementMouseIsOver.id !== imageId) {
                 dismissImage(event)
