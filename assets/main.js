@@ -1,4 +1,4 @@
-document.onload = function() {
+window.onload = function() {
     let links = document.getElementsByClassName("image-text")
     for(let link of links) {
         link.onmouseover = function(event) {
