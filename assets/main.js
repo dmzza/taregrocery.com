@@ -46,4 +46,17 @@ window.onload = function() {
         }
     }
     
+    let modal = document.getElementsByClassName("mailing-list")[0]
+    let signUpButton = document.getElementById("signUp")
+    signUpButton.onclick = function(event) {
+        event.preventDefault()
+        modal.style.display = "block"
+        window.scrollTo(0, 0)
+    }
+
+    let dismissButton = document.getElementById("dismiss")
+    dismissButton.onclick = function(event) {
+        event.preventDefault()
+        modal.style.display = "none"
+    }
 }
