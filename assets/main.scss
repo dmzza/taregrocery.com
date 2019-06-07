@@ -21,7 +21,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   background-color: #EFECE4;
-  font-size: calc(5vmin + 1.75vmax);
+  font-size: calc(5vmin + 1.75vmax); // vmax is (2 / 5.7) of vmin
 }
 
 .highlighted {
@@ -29,7 +29,13 @@ body {
 }
 
 .container-fluid.wrapper {
-  padding: 15px;
+  padding: 20px;
+  @media (min-width: 768px) {
+    padding: 44px;
+  }
+  @media (min-width: 1440px) {
+    padding: 51px;
+  }
 }
 
 span, a {
