@@ -94,6 +94,9 @@ span, a {
         font-size: 1em;
         font-family: 'Times New Roman', Times, serif;
         text-decoration: none;
+        &:hover {
+          color: white;
+        }
       }
     }
   }
