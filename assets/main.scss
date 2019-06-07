@@ -73,6 +73,7 @@ span, a {
     input[type=text] {
       background: none;
       border: none;
+      outline: none;
       color: white;
       &::placeholder {
         color: rgba(255,255,255,0.4);
