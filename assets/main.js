@@ -19,12 +19,12 @@ window.onload = function() {
             let imageRect = image.getBoundingClientRect()
             let viewportHeight = window.innerHeight
             let viewportWidth = window.innerWidth
-            var imageTop = linkRect.bottom
-            var imageLeft = linkRect.left
-            let margin = 30
+            var imageTop = linkRect.bottom - 40
+            var imageLeft = linkRect.left + 200
+            let margin = 100
 
             imageTop = boundDimensionByViewport(imageTop, imageRect.height, viewportHeight, margin)
-            imageLeft = boundDimensionByViewport(imageLeft, imageRect.width, viewportWidth, 15)
+            imageLeft = boundDimensionByViewport(imageLeft, imageRect.width, viewportWidth, margin)
 
             image.style.top = "" + imageTop + "px"
             image.style.left = "" + imageLeft + "px"
