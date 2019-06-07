@@ -17,38 +17,38 @@
  * Body
  */
 
- body {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-   color: white;
-   background-color: #EFECE4;
-   font-size: 2.5rem;
-   line-height: 1.3;
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  background-color: #EFECE4;
+  font-size: 2.5rem;
+  line-height: 1.3;
 
-    @media (min-width: 768px) {
-      font-size: 4rem;
-      line-height: 1.25;
-    }
- }
-
- .highlighted {
-  color: var(--primary-color);
- }
-
- .container-fluid.wrapper {
-   padding: 15px;
- }
-
-  span, a {
-    font-family: "Times New Roman", serif;
-    text-decoration: underline;
-    color: unset;
-    &:hover {
-      color: var(--primary-color);
-    }
-    &#company-name {
-      text-decoration: none;
-    }
+  @media (min-width: 768px) {
+    font-size: 4rem;
+    line-height: 1.25;
   }
+}
+
+.highlighted {
+  color: var(--primary-color);
+}
+
+.container-fluid.wrapper {
+  padding: 15px;
+}
+
+span, a {
+  font-family: "Times New Roman", serif;
+  text-decoration: underline;
+  color: unset;
+  &:hover {
+    color: var(--primary-color);
+  }
+  &#company-name {
+    text-decoration: none;
+  }
+}
 
 .hover-image {
   position: absolute;
