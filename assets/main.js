@@ -6,11 +6,11 @@ window.onload = function() {
             let image = document.getElementById(imageId)
             image.style.display = "block"
 
-            let boundDimensionByViewport = function(elementStart, elementDimension, viewportDimension, margin) {
+            let boundDimensionByViewport = function(elementStart, elementDimension, viewportDimension, minimumSpaceFromEdge) {
                 let elementEnd = elementStart + elementDimension
                 var newElementStart = elementStart
-                if(elementEnd > viewportDimension - margin) {
-                    newElementStart -= elementEnd - (viewportDimension - margin)
+                if(elementEnd > viewportDimension - minimumSpaceFromEdge) {
+                    newElementStart -= elementEnd - (viewportDimension - minimumSpaceFromEdge)
                 }
                 return newElementStart
             }
@@ -21,10 +21,10 @@ window.onload = function() {
             let viewportWidth = window.innerWidth
             var imageTop = linkRect.bottom - 40
             var imageLeft = linkRect.left + 200
-            let margin = 100
+            let minimumSpaceFromEdge = 100
 
-            imageTop = boundDimensionByViewport(imageTop, imageRect.height, viewportHeight, margin)
-            imageLeft = boundDimensionByViewport(imageLeft, imageRect.width, viewportWidth, margin)
+            imageTop = boundDimensionByViewport(imageTop, imageRect.height, viewportHeight, minimumSpaceFromEdge)
+            imageLeft = boundDimensionByViewport(imageLeft, imageRect.width, viewportWidth, minimumSpaceFromEdge)
 
             image.style.top = "" + imageTop + "px"
             image.style.left = "" + imageLeft + "px"
