@@ -18,7 +18,7 @@
  */
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Suisse Int'l", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   background-color: #EFECE4;
   font-size: calc(5vmin + 1.75vmax); // vmax is (2 / 5.7) of vmin
@@ -39,7 +39,7 @@ body {
 }
 
 span, a {
-  font-family: "Times New Roman", serif;
+  font-family: "SuisseWorks-Regular", "Times New Roman", Times, serif;
   text-decoration: underline;
   color: unset;
   &:hover {
@@ -94,7 +94,7 @@ span, a {
       .btn {
         color: rgba(255,255,255,0.4);
         font-size: 1em;
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "SuisseWorks-Regular", "Times New Roman", Times, serif;
         text-decoration: none;
         padding-left: 0;
         outline: none;
