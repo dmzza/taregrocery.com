@@ -45,7 +45,7 @@ window.onload = function() {
             let companyName = document.getElementById("company-name")
             let x = event.clientX
             let y = event.clientY
-            let elementMouseIsOver = document.elementFromPoint(x, y);
+            let elementMouseIsOver = document.elementFromPoint(x, y)
             let dismissImage = function(event) {
                 image.style.display = "none"
                 link.classList.remove(["highlighted"])
