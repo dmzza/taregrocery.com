@@ -3,6 +3,7 @@
 
 :root {
   --primary-color: #F74C25;
+  --line-height: 1.2;
 }
 
 /*
@@ -22,7 +23,7 @@ body {
   color: white;
   background-color: #EFECE4;
   font-size: calc(5.35vmin + 1.88vmax); // vmax is (2 / 5.7) of vmin
-  line-height: 1.2;
+  line-height: var(--line-height);
 }
 
 .highlighted {
@@ -101,7 +102,8 @@ span, a {
         font-size: 1em;
         font-family: "SuisseWorks-Regular", "Times New Roman", Times, serif;
         text-decoration: none;
-        padding-left: 0;
+        line-height: var(--line-height);
+        padding: 0;
         outline: none;
         &:hover {
           color: white;
