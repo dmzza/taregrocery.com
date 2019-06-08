@@ -1,5 +1,8 @@
+var selectedLink = null
+
 window.onload = function() {
     let links = document.getElementsByClassName("image-text")
+    
     for(let link of links) {
         let hoverHandler = function(event) {
             let imageId = link.dataset.imageId
@@ -8,6 +11,7 @@ window.onload = function() {
             image.style.display = "block"
             link.classList.add(["highlighted"])
             companyName.classList.remove(["highlighted"])
+            selectedLink = link
 
             let boundDimensionByViewport = function(elementStart, elementDimension, viewportDimension, minimumSpaceFromEdge) {
                 let elementEnd = elementStart + elementDimension
@@ -33,6 +37,7 @@ window.onload = function() {
             image.style.left = "" + imageLeft + "px"
         }
         link.addEventListener("mouseover", hoverHandler)
+        link.addEventListener("touchend", hoverHandler)
     
         link.addEventListener("mouseout", function(event) {
             let imageId = link.dataset.imageId
@@ -45,6 +50,7 @@ window.onload = function() {
                 image.style.display = "none"
                 link.classList.remove(["highlighted"])
                 companyName.classList.add(["highlighted"])
+                selectedLink = null
             }
             if(elementMouseIsOver !== null && elementMouseIsOver.id !== imageId) {
                 dismissImage(event)
@@ -53,6 +59,23 @@ window.onload = function() {
             }
         })
     }
+
+    document.addEventListener("touchstart", function(event) {
+        if(selectedLink !== null) {
+            let imageId = selectedLink.dataset.imageId
+            let x = event.touches[0].clientX
+            let y = event.touches[0].clientY
+            let elementMouseIsOver = document.elementFromPoint(x, y)
+            if(elementMouseIsOver !== null && elementMouseIsOver !== selectedLink && elementMouseIsOver.id !== imageId) {
+                let image = document.getElementById(imageId)
+                let companyName = document.getElementById("company-name")
+                image.style.display = "none"
+                selectedLink.classList.remove(["highlighted"])
+                companyName.classList.add(["highlighted"])
+                selectedLink = null
+            }
+        }
+    })
     
     let modal = document.getElementsByClassName("mailing-list")[0]
     let signUpButton = document.getElementById("signUp")
