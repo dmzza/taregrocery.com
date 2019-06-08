@@ -55,9 +55,11 @@ window.onload = function() {
     
     let modal = document.getElementsByClassName("mailing-list")[0]
     let signUpButton = document.getElementById("signUp")
+    let body = document.getElementsByTagName("body")[0]
     signUpButton.onclick = function(event) {
         event.preventDefault()
         modal.style.display = "block"
+        body.classList.add(["overflow-hidden"])
         window.scrollTo(0, 0)
     }
 
@@ -65,5 +67,6 @@ window.onload = function() {
     dismissButton.onclick = function(event) {
         event.preventDefault()
         modal.style.display = "none"
+        body.classList.remove(["overflow-hidden"])
     }
 }
