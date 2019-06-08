@@ -1,7 +1,7 @@
 window.onload = function() {
     let links = document.getElementsByClassName("image-text")
     for(let link of links) {
-        link.onmouseover = function(event) {
+        let hoverHandler = function(event) {
             let imageId = link.dataset.imageId
             let image = document.getElementById(imageId)
             let companyName = document.getElementById("company-name")
@@ -32,8 +32,9 @@ window.onload = function() {
             image.style.top = "" + imageTop + "px"
             image.style.left = "" + imageLeft + "px"
         }
+        link.addEventListener("mouseover", hoverHandler)
     
-        link.onmouseout = function(event) {
+        link.addEventListener("mouseout", function(event) {
             let imageId = link.dataset.imageId
             let image = document.getElementById(imageId)
             let companyName = document.getElementById("company-name")
@@ -50,7 +51,7 @@ window.onload = function() {
             } else {
                 image.onmouseout = dismissImage
             }
-        }
+        })
     }
     
     let modal = document.getElementsByClassName("mailing-list")[0]
