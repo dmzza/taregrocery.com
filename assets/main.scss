@@ -57,7 +57,7 @@ span, a {
 }
 
 .hover-image {
-  position: absolute;
+  position: fixed;
   display: none;
   z-index: 99;
 }
