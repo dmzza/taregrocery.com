@@ -62,6 +62,30 @@ span, a {
   z-index: 99;
 }
 
+@media (max-width: 1439px) {
+  #bag {
+    width: 398px;
+  }
+  #waste {
+    width: 394px;
+  }
+  #hood {
+    width: 341px;
+  }
+}
+
+@media (max-width: 767px) {
+  #bag {
+    width: 238px;
+  }
+  #waste {
+    width: 243px;
+  }
+  #hood {
+    width: 308px;
+  }
+}
+
 .mailing-list {
   position: absolute;
   display: none;
