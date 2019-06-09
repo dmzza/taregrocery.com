@@ -93,4 +93,13 @@ window.onload = function() {
         modal.style.display = "none"
         body.classList.remove(["overflow-hidden"])
     }
+
+    let resizeHandler = function() {
+        let visualViewportHeight = window.visualViewport.height
+        document.documentElement.style.setProperty('--visual-viewport-height', "" + visualViewportHeight + "px")
+    }
+    resizeHandler()
+    window.visualViewport.addEventListener("resize", function(event) {
+        requestAnimationFrame(resizeHandler)
+    })
 }
