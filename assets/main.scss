@@ -4,6 +4,13 @@
 :root {
   --primary-color: #F74C25;
   --line-height: 1.2;
+  --minimum-space-from-edge: 20px;
+  @media (min-width: 768px) {
+    --minimum-space-from-edge: 40px;
+  }
+  @media (min-width: 1440px) {
+    --minimum-space-from-edge: 100px;
+  }
 }
 
 /*

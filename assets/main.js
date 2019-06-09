@@ -26,9 +26,9 @@ window.onload = function() {
             let imageRect = image.getBoundingClientRect()
             let viewportHeight = window.innerHeight
             let viewportWidth = window.innerWidth
-            var imageTop = linkRect.bottom - 40
+            var imageTop = linkRect.bottom - 30
             var imageLeft = linkRect.left + 200
-            let minimumSpaceFromEdge = 100
+            let minimumSpaceFromEdge = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--minimum-space-from-edge'))
 
             imageTop = boundDimensionByViewport(imageTop, imageRect.height, viewportHeight, minimumSpaceFromEdge)
             imageLeft = boundDimensionByViewport(imageLeft, imageRect.width, viewportWidth, minimumSpaceFromEdge)
