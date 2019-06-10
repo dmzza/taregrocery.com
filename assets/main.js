@@ -7,10 +7,8 @@ window.onload = function() {
         let hoverHandler = function(event) {
             let imageId = link.dataset.imageId
             let image = document.getElementById(imageId)
-            let companyName = document.getElementById("company-name")
             image.style.display = "block"
             link.classList.add(["highlighted"])
-            companyName.classList.remove(["highlighted"])
             selectedLink = link
 
             let boundDimensionByViewport = function(elementStart, elementDimension, viewportDimension, minimumSpaceFromEdge) {
@@ -42,14 +40,12 @@ window.onload = function() {
         link.addEventListener("mouseout", function(event) {
             let imageId = link.dataset.imageId
             let image = document.getElementById(imageId)
-            let companyName = document.getElementById("company-name")
             let x = event.clientX
             let y = event.clientY
             let elementMouseIsOver = document.elementFromPoint(x, y)
             let dismissImage = function(event) {
                 image.style.display = "none"
                 link.classList.remove(["highlighted"])
-                companyName.classList.add(["highlighted"])
                 selectedLink = null
             }
             if(elementMouseIsOver !== null && elementMouseIsOver.id !== imageId) {
@@ -68,10 +64,8 @@ window.onload = function() {
             let elementMouseIsOver = document.elementFromPoint(x, y)
             if(elementMouseIsOver !== null && elementMouseIsOver !== selectedLink && elementMouseIsOver.id !== imageId) {
                 let image = document.getElementById(imageId)
-                let companyName = document.getElementById("company-name")
                 image.style.display = "none"
                 selectedLink.classList.remove(["highlighted"])
-                companyName.classList.add(["highlighted"])
                 selectedLink = null
             }
         }
