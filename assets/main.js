@@ -91,7 +91,18 @@ window.onload = function() {
     let resizeHandler = function() {
         // Mobile Viewport Height: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
         let vh = window.innerHeight / 100.0
+        let vw = window.innerWidth / 100.0
+        let vmin, vmax
+        if(vh > vw) {
+            vmin = vw
+            vmax = vh
+        } else {
+            vmin = vh
+            vmax = vw
+        }
         document.documentElement.style.setProperty('--vh', "" + vh + "px")
+        document.documentElement.style.setProperty('--vmin', "" + vmin + "px")
+        document.documentElement.style.setProperty('--vmax', "" + vmax + "px")
     }
     resizeHandler()
     window.addEventListener("resize", function(event) {

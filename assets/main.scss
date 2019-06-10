@@ -33,7 +33,7 @@ body {
   font-family: "Suisse Int'l", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   background-color: #EFECE4;
-  font-size: calc(5.35vmin + 1.88vmax); // vmax is (2 / 5.7) of vmin
+  font-size: calc(var(--vmin) * 5.35 + var(--vmax) * 1.88); // vmax is (2 / 5.7) of vmin
   line-height: var(--line-height);
 }
 
