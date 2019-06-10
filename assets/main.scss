@@ -105,7 +105,7 @@ span, a {
     flex-direction: column;
     height: calc(var(--visible-viewport-height) - var(--page-padding) * 2);
     justify-content: space-between;
-    input[type=text] {
+    input[type=email] {
       background: none;
       border: none;
       outline: none;
