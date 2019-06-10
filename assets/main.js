@@ -89,8 +89,9 @@ window.onload = function() {
     }
 
     let resizeHandler = function() {
-        let visualViewportHeight = window.visualViewport.height
-        document.documentElement.style.setProperty('--visual-viewport-height', "" + visualViewportHeight + "px")
+        // Mobile Viewport Height: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+        let vh = window.innerHeight / 100.0
+        document.documentElement.style.setProperty('--vh', "" + vh + "px")
     }
     resizeHandler()
     window.visualViewport.addEventListener("resize", function(event) {

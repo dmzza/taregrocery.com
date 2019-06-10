@@ -4,7 +4,7 @@
 :root {
   --primary-color: #F74C25;
   --line-height: 1.2;
-  --visual-viewport-height: 100vh;
+  --visible-viewport-height: calc(var(--vh, 1vh) * 100);
   --minimum-space-from-edge: 20px;
   @media (min-width: 768px) {
     --minimum-space-from-edge: 40px;
@@ -98,7 +98,7 @@ span, a {
   position: absolute;
   display: none;
   width: 100%;
-  height: var(--visual-viewport-height);
+  height: var(--visible-viewport-height);
   top: 0;
   left: 0;
   padding:50px;
@@ -106,7 +106,7 @@ span, a {
   form {
     display: flex;
     flex-direction: column;
-    height: calc(var(--visual-viewport-height) - 100px);
+    height: calc(var(--visible-viewport-height) - 100px);
     justify-content: space-between;
     input[type=text] {
       background: none;
