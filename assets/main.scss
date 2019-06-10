@@ -6,11 +6,14 @@
   --line-height: 1.2;
   --visible-viewport-height: calc(var(--vh, 1vh) * 100);
   --minimum-space-from-edge: 20px;
+  --page-padding: 20px;
   @media (min-width: 768px) {
     --minimum-space-from-edge: 40px;
+    --page-padding: 44px;
   }
   @media (min-width: 1440px) {
     --minimum-space-from-edge: 100px;
+    --page-padding: 51px;
   }
 }
 
@@ -39,13 +42,7 @@ body {
 }
 
 .container-fluid.wrapper {
-  padding: 20px;
-  @media (min-width: 768px) {
-    padding: 44px;
-  }
-  @media (min-width: 1440px) {
-    padding: 51px;
-  }
+  padding: var(--page-padding);
 }
 
 span, a {
@@ -101,7 +98,7 @@ span, a {
   height: var(--visible-viewport-height);
   top: 0;
   left: 0;
-  padding:50px;
+  padding: var(--page-padding);
   background-color: var(--primary-color);
   form {
     display: flex;
