@@ -94,7 +94,7 @@ window.onload = function() {
         document.documentElement.style.setProperty('--vh', "" + vh + "px")
     }
     resizeHandler()
-    window.visualViewport.addEventListener("resize", function(event) {
+    window.addEventListener("resize", function(event) {
         requestAnimationFrame(resizeHandler)
     })
 }
