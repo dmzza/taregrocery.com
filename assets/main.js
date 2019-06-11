@@ -74,20 +74,24 @@ window.onload = function() {
     let modal = document.getElementsByClassName("mailing-list")[0]
     let signUpButton = document.getElementById("signUp")
     let body = document.getElementsByTagName("body")[0]
-    signUpButton.onclick = function(event) {
-        event.preventDefault()
-        modal.style.display = "block"
-        body.classList.add(["overflow-hidden"])
-        window.scrollTo(0, 0)
+    if(signUpButton !== null) {
+        signUpButton.onclick = function(event) {
+            event.preventDefault()
+            modal.style.display = "block"
+            body.classList.add(["overflow-hidden"])
+            window.scrollTo(0, 0)
+        }
     }
 
     let dismissButton = document.getElementById("dismiss")
-    dismissButton.onclick = function(event) {
-        event.preventDefault()
-        modal.style.display = "none"
-        body.classList.remove(["overflow-hidden"])
+    if(dismissButton !== null) {
+        dismissButton.onclick = function(event) {
+            event.preventDefault()
+            modal.style.display = "none"
+            body.classList.remove(["overflow-hidden"])
+        }
     }
-
+    
     let resizeHandler = function() {
         // Mobile Viewport Height: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
         let vh = window.innerHeight / 100.0
