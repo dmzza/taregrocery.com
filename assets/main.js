@@ -77,7 +77,8 @@ window.onload = function() {
     if(signUpButton !== null) {
         signUpButton.onclick = function(event) {
             event.preventDefault()
-            modal.style.display = "block"
+            modal.style.visibility = "visible"
+            modal.style.opacity = 1
             body.classList.add(["overflow-hidden"])
             window.scrollTo(0, 0)
         }
